@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Cursor glow element — animated by script.js -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
@@ -25,230 +29,294 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ==================== Hero Section ==================== -->
     <section id="hero" class="hero">
         <div class="hero-content">
+            <p class="hero-eyebrow">Hi, I'm</p>
             <h1 class="hero-title">Raj Derangula</h1>
-            <!-- TODO: Customize your tagline below -->
-            <p class="hero-subtitle">Software Engineering Intern | Building innovative solutions</p>
+            <p class="hero-subtitle">CS Student &middot; Full-Stack Engineer &middot; Builder</p>
             <p class="hero-description">
-                <!-- TODO: Add a brief 1-2 sentence introduction about yourself -->
-                Passionate about creating efficient, scalable applications and solving complex problems through code.
+                I design and ship software end-to-end — from backend logic to polished UIs.
+                I'm drawn to fast-moving teams, AI-native products, and problems worth automating.
             </p>
-            <a href="#projects" class="cta-button">View My Projects</a>
+            <div class="hero-looking-for">
+                <span class="looking-for-label">Open to:</span>
+                SWE Internships &nbsp;&middot;&nbsp; AI / Automation &nbsp;&middot;&nbsp; Startup Engineering
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="cta-button">View My Projects</a>
+                <a href="#contact" class="cta-button-outline">Get In Touch</a>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ==================== About Section ==================== -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <!-- TODO: Fill in your bio below (3-4 sentences about your background, interests, and goals) -->
                     <p>
-                        I'm a software engineering student with a passion for building web applications and solving challenging problems.
-                        I enjoy working with modern technologies and frameworks to create user-friendly, efficient solutions.
+                        I'm a CS student who builds things that actually work. I like taking a problem,
+                        spinning up a project, and figuring it out — whether that's a full-stack web app,
+                        a Python automation script, or an API integration I've never touched before.
                     </p>
                     <p>
-                        Currently seeking software engineering internship opportunities where I can contribute to meaningful projects
-                        and continue growing my technical skills.
+                        I'm looking for internship roles at startups or tech companies where I can contribute
+                        real code from day one. I thrive in environments where speed, ownership, and shipping
+                        matter more than process.
                     </p>
+                    <div class="looking-for-box">
+                        <strong>What I'm looking for:</strong> Internships in software engineering,
+                        AI/automation tooling, or full-stack development — ideally at startups or product
+                        teams that move fast and give interns real work.
+                    </div>
                 </div>
+
                 <div class="skills">
-                    <h3>Skills & Technologies</h3>
-                    <!-- TODO: Update with your actual skills, languages, frameworks, and tools -->
-                    <div class="skills-grid">
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">MongoDB</span>
+                    <p class="skills-intro">
+                        Early-career engineer who picks up new tools fast and cares about building things
+                        end-to-end — from the database to the UI.
+                    </p>
+                    <div class="skills-categories">
+
+                        <div class="skill-category">
+                            <h4 class="skill-category-label">Languages &amp; Frameworks</h4>
+                            <div class="skills-grid">
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">HTML / CSS</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4 class="skill-category-label">Backend &amp; Databases</h4>
+                            <div class="skills-grid">
+                                <span class="skill-tag">Express</span>
+                                <span class="skill-tag">Flask</span>
+                                <span class="skill-tag">REST APIs</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4 class="skill-category-label">Tools &amp; Practices</h4>
+                            <div class="skills-grid">
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">GitHub</span>
+                                <span class="skill-tag">VS Code</span>
+                                <span class="skill-tag">Linux</span>
+                                <span class="skill-tag">Agile</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ==================== Projects Section ==================== -->
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">A few things I've built. If you're technical, my GitHub has more.</p>
             <div class="projects-grid">
 
+                <!--
+                    HOW TO FILL IN A PROJECT CARD:
+                    1. Replace the <h3> with your project title.
+                    2. Replace .project-problem with 1 sentence: what problem does this solve and for who?
+                    3. Replace .project-built with 1-2 sentences: what you built and how it works technically.
+                    4. Replace each <li> with a concrete impact/proof bullet (metric, users, complexity, time saved).
+                    5. Replace .project-stack-value with your actual tech stack.
+                    6. Replace href="#" in the links with your real GitHub repo and (optionally) live demo URL.
+                -->
+
                 <!-- Project Card 1 -->
-                <!-- TODO: Replace with your actual project details -->
                 <div class="project-card">
-                    <h3 class="project-title">Project Name #1</h3>
-                    <p class="project-description">
-                        Brief description of what this project does, the problem it solves, and any key features.
-                        Keep it concise but impactful for recruiters.
+                    <h3 class="project-title">
+                        <!-- TODO: Replace with your project title -->
+                        Your Project Title
+                    </h3>
+                    <p class="project-problem">
+                        <!-- TODO: 1 sentence — what problem, for who? -->
+                        Example: Most small teams have no easy way to track [X], leading to [Y wasted time / missed data].
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
+                    <p class="project-built">
+                        <!-- TODO: 1-2 sentences — what you built and how it works -->
+                        Built a full-stack web app that [core feature]. The backend uses [tech] to [how it works]; the frontend gives users a real-time [what they see].
+                    </p>
+                    <ul class="project-impact">
+                        <!-- TODO: 2-3 concrete bullets — metrics, integrations, or complexity signals -->
+                        <li>Reduced [task] time from [X] to [Y] for [N] users</li>
+                        <li>Integrated [API / service] to automate [what]</li>
+                        <li>Handles [N] records / requests with [performance detail]</li>
+                    </ul>
+                    <div class="project-stack">
+                        <span class="project-stack-label">Stack:</span>
+                        <!-- TODO: Replace with your real tech stack -->
+                        <span class="project-stack-value">React, Node.js, MongoDB</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
+                            <!-- TODO: Replace href with your GitHub repo URL -->
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                             GitHub
                         </a>
+                        <!-- TODO: Remove this link if you don't have a live demo -->
                         <a href="#" class="project-link project-link-live" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                             Live Demo
                         </a>
                     </div>
                 </div>
 
                 <!-- Project Card 2 -->
-                <!-- TODO: Replace with your actual project details -->
                 <div class="project-card">
-                    <h3 class="project-title">Project Name #2</h3>
-                    <p class="project-description">
-                        Brief description of what this project does, the problem it solves, and any key features.
-                        Keep it concise but impactful for recruiters.
+                    <h3 class="project-title">
+                        <!-- TODO: Replace with your project title -->
+                        Your Project Title
+                    </h3>
+                    <p class="project-problem">
+                        <!-- TODO: 1 sentence — what problem, for who? -->
+                        Example: Developers spent hours manually [X] with no easy way to [automate or visualize Y].
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">PostgreSQL</span>
+                    <p class="project-built">
+                        <!-- TODO: 1-2 sentences — what you built and how it works -->
+                        Built a [CLI tool / automation script / pipeline] in Python that [core function]. Uses [API / library] to [how it works] and outputs [what].
+                    </p>
+                    <ul class="project-impact">
+                        <!-- TODO: 2-3 concrete bullets -->
+                        <li>Saves ~[X] hours/week of manual [task] per user</li>
+                        <li>Processes [N] [records/items/requests] per run</li>
+                        <li>Deployed to [platform] and used by [N] people / my own workflow</li>
+                    </ul>
+                    <div class="project-stack">
+                        <span class="project-stack-label">Stack:</span>
+                        <!-- TODO: Replace with your real tech stack -->
+                        <span class="project-stack-value">Python, Flask, PostgreSQL</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                             GitHub
                         </a>
                         <a href="#" class="project-link project-link-live" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                             Live Demo
                         </a>
                     </div>
                 </div>
 
                 <!-- Project Card 3 -->
-                <!-- TODO: Replace with your actual project details -->
                 <div class="project-card">
-                    <h3 class="project-title">Project Name #3</h3>
-                    <p class="project-description">
-                        Brief description of what this project does, the problem it solves, and any key features.
-                        Keep it concise but impactful for recruiters.
+                    <h3 class="project-title">
+                        <!-- TODO: Replace with your project title -->
+                        Your Project Title
+                    </h3>
+                    <p class="project-problem">
+                        <!-- TODO: 1 sentence — what problem, for who? -->
+                        Example: Existing tools for [X] are either too expensive or require [painful manual step] with no programmatic alternative.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">REST API</span>
+                    <p class="project-built">
+                        <!-- TODO: 1-2 sentences — what you built and how it works -->
+                        Designed and built a [REST API / service / system] in [language] with [N] endpoints covering [core functionality]. Implemented [auth / caching / data model] to [why it matters].
+                    </p>
+                    <ul class="project-impact">
+                        <!-- TODO: 2-3 concrete bullets -->
+                        <li>Supports [N] endpoints / [N] concurrent users / [N] data models</li>
+                        <li>Reduced [pain point] by implementing [technical decision]</li>
+                        <li>[Any other concrete proof: tested with X, integrated with Y, etc.]</li>
+                    </ul>
+                    <div class="project-stack">
+                        <span class="project-stack-label">Stack:</span>
+                        <!-- TODO: Replace with your real tech stack -->
+                        <span class="project-stack-value">JavaScript, Express, REST API</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                             GitHub
                         </a>
                         <a href="#" class="project-link project-link-live" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                             Live Demo
                         </a>
                     </div>
                 </div>
 
-                <!-- TODO: Add more project cards as needed - just copy/paste one of the above blocks -->
-
             </div>
         </div>
     </section>
 
-    <!-- Socials & Links Section -->
+    <!-- ==================== Socials & Links Section ==================== -->
     <section id="socials" class="socials">
         <div class="container">
             <h2 class="section-title">Connect With Me</h2>
+            <p class="section-subtitle">If you're technical, start with my GitHub. If you're hiring, let's talk.</p>
             <div class="socials-grid">
-                <!-- TODO: Replace # with your actual profile links -->
-                <a href="#" class="social-link" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
+                <a href="https://github.com/raj-derangula" class="social-link" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                     <span>GitHub</span>
                 </a>
-                <a href="#" class="social-link" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
+                <a href="https://www.linkedin.com/in/raj-derangula-0a2b62290" class="social-link" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                     <span>LinkedIn</span>
                 </a>
-                <a href="mailto:your.email@example.com" class="social-link">
-                    <!-- TODO: Replace with your actual email -->
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
+                <a href="mailto:vigneshrajderangula@gmail.com" class="social-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                     <span>Email</span>
                 </a>
-                <!-- TODO: Add more social links as needed (Twitter, personal website, etc.) -->
             </div>
         </div>
     </section>
 
-    <!-- Resume Section -->
+    <!-- ==================== Resume Section ==================== -->
     <section id="resume" class="resume">
         <div class="container">
             <h2 class="section-title">Resume</h2>
             <div class="resume-content">
                 <p class="resume-description">
-                    <!-- TODO: Customize this message about what you're looking for -->
-                    I'm actively seeking software engineering internship opportunities for Summer 2026.
-                    I'm particularly interested in roles involving full-stack development, backend systems, or cloud technologies.
+                    I'm actively looking for <strong>Summer 2026 software engineering internships</strong> — particularly at
+                    startups, AI-focused companies, or product teams building something ambitious.
+                    If you're hiring for SWE, full-stack, or AI/automation roles, I'd love to chat.
                 </p>
-                <!-- TODO: Replace # with the path to your resume PDF once you have it -->
-                <a href="#" class="resume-button" target="_blank">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    Download Resume
-                </a>
+                <div class="resume-actions">
+                    <a href="Raj_Derangula_Resume (1).pdf" class="resume-button" target="_blank">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Download Resume
+                    </a>
+                    <a href="mailto:vigneshrajderangula@gmail.com" class="resume-button-outline">
+                        Let's Talk
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact/Footer Section -->
+    <!-- ==================== Contact / Footer ==================== -->
     <footer id="contact" class="footer">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p class="footer-message">
-                <!-- TODO: Customize your contact message -->
-                I'm always open to discussing new opportunities, interesting projects, or just connecting!
-                Feel free to reach out via email or connect with me on LinkedIn.
+                If you're hiring for a software engineering internship — especially in AI, automation,
+                or full-stack product work — I'd love to hear from you. I respond fast.
             </p>
-            <div class="footer-contact">
-                <!-- TODO: Replace with your actual email -->
-                <a href="mailto:your.email@example.com" class="footer-email">your.email@example.com</a>
+            <div class="footer-contact-links">
+                <a href="mailto:vigneshrajderangula@gmail.com" class="footer-email">vigneshrajderangula@gmail.com</a>
+                <span class="footer-divider">&middot;</span>
+                <a href="https://www.linkedin.com/in/raj-derangula-0a2b62290" class="footer-social-link" target="_blank">LinkedIn</a>
+                <span class="footer-divider">&middot;</span>
+                <a href="https://github.com/raj-derangula" class="footer-social-link" target="_blank">GitHub</a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Raj Derangula. Built with HTML, CSS, and JavaScript.</p>
+                <p>&copy; <span id="footerYear"></span> Raj Derangula &nbsp;&middot;&nbsp; (909) 656-2869</p>
             </div>
         </div>
     </footer>

@@ -1,108 +1,96 @@
+// ==================== Cursor Glow Effect ====================
+// Subtle red radial gradient that follows the mouse with a slight lag.
+// Automatically hidden on mobile via CSS (touch users don't have a cursor).
+
+const cursorGlow = document.getElementById('cursorGlow');
+
+document.addEventListener('mousemove', (e) => {
+    cursorGlow.style.left = e.clientX + 'px';
+    cursorGlow.style.top  = e.clientY + 'px';
+});
+
+// Fade out when the cursor leaves the window
+document.addEventListener('mouseleave', () => {
+    cursorGlow.style.opacity = '0';
+});
+
+document.addEventListener('mouseenter', () => {
+    cursorGlow.style.opacity = '1';
+});
+
 // ==================== Mobile Navigation Toggle ====================
 
 const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-const navLinks = document.querySelectorAll('.nav-link');
+const navMenu   = document.getElementById('navMenu');
+const navLinks  = document.querySelectorAll('.nav-link');
 
-// Toggle mobile menu
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-
-    // Animate hamburger icon
-    const spans = navToggle.querySelectorAll('span');
-    if (navMenu.classList.contains('active')) {
-        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-    } else {
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-    }
+    const spans  = navToggle.querySelectorAll('span');
+    const isOpen = navMenu.classList.contains('active');
+    spans[0].style.transform = isOpen ? 'rotate(45deg) translate(4px, 4px)'  : 'none';
+    spans[1].style.opacity   = isOpen ? '0' : '1';
+    spans[2].style.transform = isOpen ? 'rotate(-45deg) translate(6px, -5px)' : 'none';
 });
 
-// Close mobile menu when a link is clicked
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
-
-        // Reset hamburger icon
         const spans = navToggle.querySelectorAll('span');
         spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
+        spans[1].style.opacity   = '1';
         spans[2].style.transform = 'none';
     });
 });
 
 // ==================== Smooth Scrolling ====================
 
-// Smooth scroll for all anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            const navHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = targetElement.offsetTop - navHeight;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
+        const target = document.querySelector(targetId);
+        if (!target) return;
+        e.preventDefault();
+        const navHeight = document.querySelector('.navbar').offsetHeight;
+        window.scrollTo({ top: target.offsetTop - navHeight, behavior: 'smooth' });
     });
 });
 
-// ==================== Scroll Effects ====================
+// ==================== Navbar Shadow on Scroll ====================
 
-// Add shadow to navbar on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)';
-    } else {
-        navbar.style.boxShadow = 'none';
-    }
+    navbar.style.boxShadow = window.scrollY > 60
+        ? '0 4px 16px rgba(0,0,0,0.4)'
+        : 'none';
 });
 
-// ==================== Simple Fade-in Animation on Scroll ====================
-
-// Intersection Observer for fade-in effect
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+// ==================== Fade-in on Scroll ====================
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
+            entry.target.style.opacity   = '1';
             entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target); // only animate once
         }
     });
-}, observerOptions);
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-// Apply fade-in to sections and cards
 document.addEventListener('DOMContentLoaded', () => {
-    const elementsToAnimate = document.querySelectorAll('.project-card, .social-link, .about-content, .resume-content');
-
-    elementsToAnimate.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(element);
+    const targets = document.querySelectorAll(
+        '.project-card, .social-link, .about-content, .resume-content, .looking-for-box'
+    );
+    targets.forEach(el => {
+        el.style.opacity   = '0';
+        el.style.transform = 'translateY(18px)';
+        el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+        observer.observe(el);
     });
 });
 
-// ==================== Copyright Year Auto-Update ====================
+// ==================== Auto Copyright Year ====================
 
-// Automatically update copyright year
-const currentYear = new Date().getFullYear();
-const copyrightElement = document.querySelector('.footer-bottom p');
-if (copyrightElement) {
-    copyrightElement.textContent = copyrightElement.textContent.replace('2026', currentYear);
-}
+const yearEl = document.getElementById('footerYear');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
