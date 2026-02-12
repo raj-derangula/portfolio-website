@@ -207,7 +207,7 @@ body {
     font-weight: 800;
     line-height: 1.15;
     margin-bottom: 0.75rem;
-    padding-bottom: 0.1em; /* prevents descenders (g, y, p) from being clipped by gradient mask */
+    padding-bottom: 0.25em; /* prevents descenders (g, y, p) from being clipped by gradient mask */
     background: linear-gradient(135deg, #ffffff 40%, var(--accent-red) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
