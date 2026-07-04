@@ -140,12 +140,17 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <p class="section-subtitle">A few things I've built. If you're technical, my GitHub has more.</p>
-            <div class="projects-grid">
-
-                <!-- Project Card 1: Airlock -->
-                <div class="project-card project-card-featured">
+            <!-- Featured Project: Airlock -->
+            <div class="featured-project">
+                <div class="featured-project-media">
+                    <video class="featured-project-video" autoplay loop muted playsinline>
+                        <source src="assets/airlock-demo.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="featured-project-content">
                     <div class="project-title-row">
                         <h3 class="project-title">
+                            <img src="assets/airlock-icon.jpg" alt="" class="project-title-icon">
                             Airlock
                         </h3>
                         <span class="live-badge"><span class="live-dot"></span>Live</span>
@@ -154,12 +159,12 @@
                         Focus interception for your phone. Enter your mission before you open your apps.
                     </p>
                     <p class="project-built">
-                        Airlock is a pre-launch consumer iOS app that intercepts you before you open distracting social apps. Unlike every existing app blocker which simply blocks access, Airlock prompts you to declare your mission first and then displays it persistently through iOS Dynamic Island Live Activities so it stays visible the entire session. Building an audience and waitlist publicly before writing a single line of code.
+                        Airlock is a consumer iOS app that intercepts you before you open distracting social apps. Unlike every existing app blocker which simply blocks access, Airlock prompts you to declare your mission first and then displays it persistently through iOS Dynamic Island Live Activities so it stays visible the entire session. Public beta is live on TestFlight.
                     </p>
                     <ul class="project-impact">
                         <li>Mission-declaration prompt intercepts app launches before distracting social apps open</li>
                         <li>iOS Dynamic Island Live Activities keep your stated mission visible throughout the session</li>
-                        <li>Building waitlist and audience publicly pre-launch, zero code written yet</li>
+                        <li>Live public beta on TestFlight, built and shipped an audience before writing a line of code</li>
                     </ul>
                     <div class="project-stack">
                         <span class="project-stack-label">Stack:</span>
@@ -167,21 +172,24 @@
                     </div>
                     <div class="project-stack" style="margin-top: 0.5rem;">
                         <span class="project-stack-label">Status:</span>
-                        <span class="project-stack-value">Waitlist live now, join today</span>
+                        <span class="project-stack-value">Live beta on TestFlight</span>
                     </div>
                     <div class="project-links">
                         <a href="https://tiktok.com/@rajderangula_" class="project-link" target="_blank">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34l.04-8.56a8.28 8.28 0 0 0 4.83 1.55V5.01a4.85 4.85 0 0 1-1.11-.32z"/></svg>
                             @rajderangula_
                         </a>
-                        <a href="https://airlock-waitlist.vercel.app/" class="project-link project-link-live" target="_blank">
+                        <a href="https://testflight.apple.com/join/57kpjCH9" class="project-link project-link-live" target="_blank">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            Join Waitlist
+                            Try on TestFlight
                         </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Project Card 2: AI Outbound Automation System -->
+            <div class="projects-grid">
+
+                <!-- Project Card 1: AI Outbound Automation System -->
                 <div class="project-card">
                     <h3 class="project-title">
                         AI Outbound Automation System
@@ -209,7 +217,7 @@
                     </div>
                 </div>
 
-                <!-- Project Card 3: ProfitPilot -->
+                <!-- Project Card 2: ProfitPilot -->
                 <div class="project-card">
                     <h3 class="project-title">
                         ProfitPilot: AI Inventory Tracker
